@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,6 +25,14 @@ public class Rodzaj_Kawy extends AppCompatActivity implements AdapterView.OnItem
         ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item,Rodzaj_Kawy);
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spin.setAdapter(aa);
+
+
+        Spinner spin2 = (Spinner) findViewById(R.id.Spiner2);
+        spin2.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
+
+        ArrayAdapter aa2 = new ArrayAdapter(this,android.R.layout.simple_spinner_item,Dodatki);
+        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spin2.setAdapter(aa2);
     }
     @Override
     public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long id) {
@@ -38,5 +47,16 @@ public class Rodzaj_Kawy extends AppCompatActivity implements AdapterView.OnItem
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    public void Przyprawy(View view) {
+        CheckBox Przyprawa = findViewById(R.id.PRzyprawa);
+        Spinner spin = (Spinner) findViewById(R.id.Spiner2);
+        if(Przyprawa.isChecked()){
+            spin.setVisibility(View.VISIBLE);
+        }
+        else{
+            spin.setVisibility(View.INVISIBLE);
+        }
     }
 }

@@ -112,7 +112,7 @@
         android:text="mleko" />
 
     <CheckBox
-        android:id="@+id/checkBox4"
+        android:id="@+id/PRzyprawa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -121,7 +121,9 @@
         android:layout_marginStart="25dp"
         android:layout_marginEnd="239dp"
         android:layout_marginBottom="254dp"
-        android:text="Przyprawy" />
+        android:text="Przyprawy"
+        android:onClick="Przyprawy"
+        />
 
     <Spinner
         android:id="@+id/Spiner"
@@ -132,6 +134,20 @@
         android:layout_marginEnd="210dp"
         android:layout_marginBottom="624dp"
         >
+
+    </Spinner>
+
+    <Spinner
+        android:id="@+id/Spiner2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="161dp"
+        android:layout_marginEnd="103dp"
+        android:layout_marginBottom="265dp"
+        android:visibility="invisible">
 
     </Spinner>
 
@@ -147,4 +163,9 @@
         android:layout_marginBottom="626dp"
         android:text=""
         android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/Dodatek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </RelativeLayout>
