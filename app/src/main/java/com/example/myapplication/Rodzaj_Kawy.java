@@ -17,6 +17,7 @@ public class Rodzaj_Kawy extends AppCompatActivity implements AdapterView.OnItem
     String[] Dodatki = {"Kakao","Cynamon","Imbir", "Kardamon", "Wanilia"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rodzaj_kawy);
         Spinner spin = (Spinner) findViewById(R.id.Spiner);
@@ -31,8 +32,26 @@ public class Rodzaj_Kawy extends AppCompatActivity implements AdapterView.OnItem
         spin2.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
 
         ArrayAdapter aa2 = new ArrayAdapter(this,android.R.layout.simple_spinner_item,Dodatki);
-        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        aa2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spin2.setAdapter(aa2);
+
+        spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                TextView Dodatki = findViewById(R.id.Dodatek);
+                if(spin2.getSelectedItem().equals("Kakao")) Dodatki.setText("Kakao");
+                if(spin2.getSelectedItem().equals("Cynamon")) Dodatki.setText("Cynamon");
+                if(spin2.getSelectedItem().equals("Imbir")) Dodatki.setText("Imbir");
+                if(spin2.getSelectedItem().equals("Kardamon")) Dodatki.setText("Kardamon");
+                if(spin2.getSelectedItem().equals("Wanilia")) Dodatki.setText("Wanilia");
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
     }
     @Override
     public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long id) {
@@ -51,12 +70,20 @@ public class Rodzaj_Kawy extends AppCompatActivity implements AdapterView.OnItem
 
     public void Przyprawy(View view) {
         CheckBox Przyprawa = findViewById(R.id.PRzyprawa);
-        Spinner spin = (Spinner) findViewById(R.id.Spiner2);
+        Spinner spin2 = (Spinner) findViewById(R.id.Spiner2);
+        TextView Dodatki = findViewById(R.id.Dodatek);
         if(Przyprawa.isChecked()){
-            spin.setVisibility(View.VISIBLE);
+            spin2.setVisibility(View.VISIBLE);
+            if(spin2.getSelectedItem().equals("Kakao")) Dodatki.setText("Kakao");
+            if(spin2.getSelectedItem().equals("Cynamon")) Dodatki.setText("Cynamon");
+            if(spin2.getSelectedItem().equals("Imbir")) Dodatki.setText("Imbir");
+            if(spin2.getSelectedItem().equals("Kardamon")) Dodatki.setText("Kardamon");
+            if(spin2.getSelectedItem().equals("Wanilia")) Dodatki.setText("Wanilia");
         }
         else{
-            spin.setVisibility(View.INVISIBLE);
+            spin2.setVisibility(View.INVISIBLE);
+            Dodatki.setText("");
         }
     }
+
 }
