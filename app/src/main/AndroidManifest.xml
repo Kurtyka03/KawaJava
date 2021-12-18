@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".Ocena"
+            android:exported="false" />
+        <activity
+            android:name=".Posuwmoanie"
+            android:exported="false" />
+        <activity
             android:name=".Rodzaj_Kawy"
             android:exported="true" />
         <activity

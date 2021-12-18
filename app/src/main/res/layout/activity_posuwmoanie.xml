@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Posuwmoanie">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="147dp"
+        android:layout_height="39dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="628dp"
+        android:text="Dane zamoenia"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="63dp" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="172dp"
+        android:layout_marginBottom="191dp"
+        android:text="Akceptuje Regulamin"
+        />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="166dp"
+        android:layout_marginBottom="107dp"
+        android:enabled="false"
+        android:text="Zamow"
+        android:onClick="Dalej"/>
+
+    <TextView
+        android:id="@+id/Dodatki"
+        android:layout_width="199dp"
+        android:layout_height="127dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="122dp"
+        android:layout_marginBottom="438dp" />
+
+    <TextView
+        android:id="@+id/RodzajKawy"
+        android:layout_width="188dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="146dp"
+        android:layout_marginBottom="579dp"
+        android:text="Kawa" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="192dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="139dp"
+        android:layout_marginBottom="398dp"
+        android:text="Dane Zamowienia" />
+
+    <TextView
+        android:id="@+id/Dane_Zamowenia"
+        android:layout_width="152dp"
+        android:layout_height="65dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="327dp"
+        android:text="-Adres \n-Telefon" />
+</RelativeLayout>
