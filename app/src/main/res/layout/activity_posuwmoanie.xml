@@ -14,7 +14,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="150dp"
         android:layout_marginBottom="628dp"
-        android:text="Dane zamoenia"
+        android:text="Dane Twojego Zamówienia"
         tools:layout_editor_absoluteX="147dp"
         tools:layout_editor_absoluteY="63dp" />
 
@@ -68,7 +68,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="139dp"
         android:layout_marginBottom="398dp"
-        android:text="Dane Zamowienia" />
+        android:text="Twoje Dane" />
 
     <TextView
         android:id="@+id/Dane_Zamowenia"

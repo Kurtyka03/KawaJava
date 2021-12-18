@@ -66,7 +66,6 @@ public class Posuwmoanie extends AppCompatActivity {
         }
         if(!PrzyprawaB){
             Dodatki_EditText.setText(Dodatki_Lista);
-            Toast.makeText(this, "bez dodatku", Toast.LENGTH_SHORT).show();
         }else{
             Dodatki_EditText.setText(Dodatki_Lista + Dodatek);
         }
