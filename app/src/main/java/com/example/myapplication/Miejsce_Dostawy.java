@@ -29,7 +29,7 @@ public class Miejsce_Dostawy extends AppCompatActivity {
         EditText Adres = findViewById(R.id.Ares);
         boolean Telefon = Pattern.matches("^[0-9]{9}$", TelefonEdit.getText().toString());
         if(Telefon){
-            if(Adres.getText().toString() != ""){
+            if(Adres.getText().toString() != null){
                 i.putExtra("Adres", Adres.getText().toString());
                 i.putExtra("Telefon", TelefonEdit.getText().toString());
                 startActivity(i);
